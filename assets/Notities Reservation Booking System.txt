@@ -1,0 +1,29 @@
+Registratie / Inlog
+
+Administrator / Aanbieder
+kan user account aanmaken voor hoteleigenaar
+heeft aparte administrator page (net zoals bij Wordpress)
+
+User / Hoteleigenaar
+krijgt inlog 
+heeft aparte inlog page
+kan inloggen met aangemaakte account door administrator
+
+Kamer typen
+
+Soorten
+Kamer
+Suite
+Apartement
+
+Kwaliteit
+Standaard
+Deluxe
+Superior
+
+Typen
+Standaard Kamer
+Deluxe Suite
+Superior Suite
+Deluxe Apartment
+Superior Apartment
