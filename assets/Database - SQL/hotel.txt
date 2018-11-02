@@ -1,0 +1,104 @@
+===Database hotel
+
+== Tabelstructuur voor tabel bezette_kamer
+
+|------
+|Kolom|Type|Leeg|Standaardwaarde
+|------
+|//**id**//|int(11)|Nee|
+|check_in|timestamp|Nee|CURRENT_TIMESTAMP
+|check_out|timestamp|Nee|0000-00-00 00:00:00
+|kamer_id|int(11)|Ja|NULL
+|reservering_id|int(11)|Ja|NULL
+== Gegevens worden geëxporteerd voor tabel bezette_kamer
+
+== Tabelstructuur voor tabel gast
+
+|------
+|Kolom|Type|Leeg|Standaardwaarde
+|------
+|//**id**//|int(11)|Nee|
+|voornaam|varchar(80)|Nee|
+|achternaam|varchar(80)|Nee|
+|lid_sinds|date|Ja|NULL
+== Gegevens worden geëxporteerd voor tabel gast
+
+|1|Kees|Jager|2014-08-01
+|2|Maartje|Dijkgraaf|2016-02-15
+|3|Peter|Buwalda|2017-04-10
+|4|Tommy|Wieringa|2012-11-06
+|5|Adriaan van|Dis|2015-12-22
+|6|Marieke Lucas|Rijneveld|2014-07-08
+|7|Jan|Harmens|2013-09-20
+|8|Hans|Dorrestijn|2011-05-05
+|9|Onno|Blom|2018-10-14
+|10|Jochem|Myjer|2018-03-18
+== Tabelstructuur voor tabel gereserveerde_kamer
+
+|------
+|Kolom|Type|Leeg|Standaardwaarde
+|------
+|//**id**//|int(11)|Nee|
+|aantal_kamers|int(11)|Nee|
+|status|varchar(20)|Nee|
+|kamer_type_id|int(11)|Ja|NULL
+|reservering_id|int(11)|Ja|NULL
+== Gegevens worden geëxporteerd voor tabel gereserveerde_kamer
+
+== Tabelstructuur voor tabel ingecheckt
+
+|------
+|Kolom|Type|Leeg|Standaardwaarde
+|------
+|//**id**//|int(11)|Nee|
+|gast_id|int(11)|Ja|NULL
+|bezette_kamer_id|int(11)|Ja|NULL
+== Gegevens worden geëxporteerd voor tabel ingecheckt
+
+== Tabelstructuur voor tabel kamer
+
+|------
+|Kolom|Type|Leeg|Standaardwaarde
+|------
+|//**id**//|int(11)|Nee|
+|nummer|int(11)|Ja|NULL
+|naam|varchar(40)|Nee|
+|status|varchar(10)|Ja|NULL
+== Gegevens worden geëxporteerd voor tabel kamer
+
+|1|1|Ludwig|schoon
+|2|2|Amadeus|bezig
+|3|3|Brahms|schoon
+|4|4|Chopin|bezig
+|5|5|Schubert|schoon
+|6|6|Verdi|schoon
+|7|7|Haydn|schoon
+== Tabelstructuur voor tabel kamer_type
+
+|------
+|Kolom|Type|Leeg|Standaardwaarde
+|------
+|//**id**//|int(11)|Nee|
+|type|varchar(80)|Nee|
+|beschrijving|varchar(255)|Ja|NULL
+|max_personen|int(11)|Nee|
+== Gegevens worden geëxporteerd voor tabel kamer_type
+
+|1|Standaard Kamer|Basic kamer met eigen badkamer|2
+|2|Deluxe Suite|Luxe suite, badkamer, keuken, minibar|2
+|3|Superior Suite|Zeer luxe suite, badkamer/whirlpool, keuken, minibar, uitzicht|4
+|4|Deluxe Apartement|Luxe apartement, badkamer, keuken, uitzichtt|4
+|5|Superior Apartement|Zeer luxe apartement, badkamer/whirlpool, keuken/kookeiland, uitzichtt|6
+== Tabelstructuur voor tabel reservering
+
+|------
+|Kolom|Type|Leeg|Standaardwaarde
+|------
+|//**id**//|int(11)|Nee|
+|date_in|date|Nee|
+|date_out|date|Nee|
+|status|varchar(20)|Nee|
+|made_by|varchar(20)|Ja|NULL
+|gast_id|int(11)|Ja|NULL
+== Gegevens worden geëxporteerd voor tabel reservering
+
